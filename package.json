@@ -1,0 +1,19 @@
+{
+  "name": "mini-dfd",
+  "version": "1.0.0",
+  "description": "A ext for Promise to make it more easy to use,a deferred like.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalldie/mini-dfd.git"
+  },
+  "author": "shalldie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shalldie/mini-dfd/issues"
+  },
+  "homepage": "https://github.com/shalldie/mini-dfd#readme"
+}
