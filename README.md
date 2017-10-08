@@ -1,6 +1,9 @@
 # mini-dfd
 A ext for Promise to make it more easy to use,a deferred like.
 
+## Install
+    npm install mini-dfd
+
 ## Example
 
 ```js
