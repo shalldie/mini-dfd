@@ -1,4 +1,4 @@
-export default () => IDeferred;
+export default function (): IDeferred;
 
 /**
  * Promise 包装对象
