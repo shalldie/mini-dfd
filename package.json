@@ -1,6 +1,6 @@
 {
   "name": "mini-dfd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A ext for Promise to make it more easy to use,a deferred like.",
   "main": "index.js",
   "scripts": {

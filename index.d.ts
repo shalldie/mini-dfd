@@ -1,4 +1,4 @@
-export default function minidfd(): IDeferred;
+export default () => IDeferred;
 
 /**
  * Promise 包装对象

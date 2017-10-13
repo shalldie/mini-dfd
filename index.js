@@ -1,18 +1,23 @@
-; (function (root, factory) {
-    var name = 'mini-dfd';
-    if (typeof define === 'function' && define.amd) {
-        // AMD
-        define([name], factory);
-    } else if (typeof exports === 'object') {
-        // Node, CommonJS-like
-        // module.exports = factory(require(name));
-        module.exports = factory();
+; (function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["exports"], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(exports);
     } else {
-        // Browser globals (root is window)
-        root[name] = factory(root[name]);
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports);
+        global.miniDfd = mod.exports;
     }
-}(this, function () {
-    return function dfd() {
+})(this, function (exports) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    exports.default = function dfd() {
         var self = this;
         // make a object factory. 工厂方法
         if (!(self instanceof dfd)) {
@@ -28,5 +33,5 @@
         this.catch = pro.catch.bind(pro);
         // 提供 promise 属性，暴露原始 promise 对象
         this.promise = pro;
-    }
-}));
+    };
+});

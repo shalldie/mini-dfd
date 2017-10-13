@@ -46,7 +46,11 @@ promise: Promise<any>
 ## Example
 
 ```js
-const minidfd = require('mini-dfd');
+// commonjs, node
+// const minidfd = require('mini-dfd').default;
+
+// es6 module, typescript
+import minidfd from 'mini-dfd';
 
 function sleep(delay) {
     let dfd = minidfd();
