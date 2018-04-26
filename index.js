@@ -17,12 +17,8 @@
         value: true
     });
 
-    exports.default = function dfd() {
+    exports.default = function () {
         var self = this;
-        // make a object factory. 工厂方法
-        if (!(self instanceof dfd)) {
-            return new dfd();
-        }
         // 将 resolve reject 暴露出来
         var pro = new Promise(function (resolve, reject) {
             self.resolve = resolve;

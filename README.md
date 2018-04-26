@@ -8,37 +8,37 @@ A ext for Promise to make it more easy to use,a deferred like.
 ```js
 /**
  * 同 Promise.prototye.then 接口
- * 
- * @memberof IDeferred
+ *
+ * @memberof Deferred
  */
-then: (onfulfilled?: (value: any) => any, onrejected?: (reason: any) => any) => Promise<any>,
+then: (onfulfilled?: (value: any) => any, onrejected?: (reason: any) => any) => Promise<any>
 
 /**
  * 同 Promise.prototype.catch 接口
- * 
- * @memberof IDeferred
+ *
+ * @memberof Deferred
  */
-catch: (onrejected?: (reason: any) => any) => Promise<any>,
+catch: (onrejected?: (reason: any) => any) => Promise<any>
 
 /**
  * 将 promise 状态更改为 fulfilled
- * 
- * @memberof IDeferred
+ *
+ * @memberof Deferred
  */
-resolve: (value?: any) => void,
+resolve: (value?: any) => void
 
 /**
  * 将 promise 状态更改为 rejected
- * 
- * @memberof IDeferred
+ *
+ * @memberof Deferred
  */
-reject: (reason?: any) => void,
+reject: (reason?: any) => void
 
 /**
  * 获取原始 promise 对象
- * 
+ *
  * @type {Promise<any>}
- * @memberof IDeferred
+ * @memberof Deferred
  */
 promise: Promise<any>
 ```
@@ -47,13 +47,13 @@ promise: Promise<any>
 
 ```js
 // commonjs, node
-// const minidfd = require('mini-dfd').default;
+// const Deferred = require('mini-dfd').default;
 
 // es6 module, typescript
-import minidfd from 'mini-dfd';
+import Deferred from 'mini-dfd';
 
 function sleep(delay) {
-    let dfd = minidfd();
+    let dfd = new Deferred();
     setTimeout(function () {
         dfd.resolve();
     }, delay);
