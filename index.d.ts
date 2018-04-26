@@ -1,44 +1,43 @@
-export default function (): IDeferred;
-
 /**
- * Promise 包装对象
- * 
- * @interface IDeferred
+ * Promise 包装对象 Deferred
+ *
+ * @export
+ * @class Deferred
  */
-interface IDeferred {
+export default class Deferred {
     /**
      * 同 Promise.prototye.then 接口
-     * 
-     * @memberof IDeferred
+     *
+     * @memberof Deferred
      */
-    then: (onfulfilled?: (value: any) => any, onrejected?: (reason: any) => any) => Promise<any>,
+    then: (onfulfilled?: (value: any) => any, onrejected?: (reason: any) => any) => Promise<any>
 
     /**
      * 同 Promise.prototype.catch 接口
-     * 
-     * @memberof IDeferred
+     *
+     * @memberof Deferred
      */
-    catch: (onrejected?: (reason: any) => any) => Promise<any>,
+    catch: (onrejected?: (reason: any) => any) => Promise<any>
 
     /**
      * 将 promise 状态更改为 fulfilled
-     * 
-     * @memberof IDeferred
+     *
+     * @memberof Deferred
      */
-    resolve: (value?: any) => void,
+    resolve: (value?: any) => void
 
     /**
      * 将 promise 状态更改为 rejected
-     * 
-     * @memberof IDeferred
+     *
+     * @memberof Deferred
      */
-    reject: (reason?: any) => void,
+    reject: (reason?: any) => void
 
     /**
      * 获取原始 promise 对象
-     * 
+     *
      * @type {Promise<any>}
-     * @memberof IDeferred
+     * @memberof Deferred
      */
     promise: Promise<any>
 }
